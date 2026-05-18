@@ -1,0 +1,30 @@
+# Universe Grok Plugin Manifest
+name = "universe-grok"
+version = "0.2.0"
+description = "Automatic extreme multi-agent orchestration harness for Grok Build. Level 2 target with Level 3 vision."
+author = "Universe Grok Contributors"
+license = "TBD"
+
+[capabilities]
+skills = true
+personas = true
+roles = false          # planned
+hooks = true           # in development
+agents = false         # planned for advanced custom agents
+
+[activation]
+auto_suggest = true
+keywords = ["universe", "universe grok", "full power", "orchestrate", "push grok", "extreme", "maximum leverage"]
+
+[compatibility]
+grok_build = ">=0.1"
+claude_code = "partial"   # reads existing conventions where possible
+
+[levels]
+current = "2"
+vision = "3"
+
+[links]
+repository = "https://github.com/your-org/universe-grok"
+docs = "https://github.com/your-org/universe-grok/blob/main/README.md"
+constitution = "CONSTITUTION.md"
