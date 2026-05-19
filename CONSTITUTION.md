@@ -45,17 +45,21 @@ Universe Grok is not just an orchestration layer.
 
 In a world where models have cutoff dates and training data becomes stale, the highest-leverage thing a powerful coding agent can do is **actively go out and find current reality** instead of relying on internal knowledge.
 
-### The Two Pillars of Truth-Seeking
+### The Three Pillars of Truth-Seeking
 1. **Defining the Right Questions** (what is actually worth knowing right now?)
+   - Concrete mechanism: the `first-questions` skill (`/first-questions`). Forces a single unambiguous sentence ("What are we actually trying to accomplish?") and applies ruthless "Question every requirement" interrogation to every scope item before any work begins.
 2. **Finding the Truth** (what do the best practitioners and sources actually say *today*?)
+3. **Reconstruction from Bedrock** (what is the actual load-bearing structure of the problem and the minimal solution that satisfies only those truths?)
+   - Concrete mechanism: the `first-principles` skill (`/first-principles`). After first-questions prunes scope, forces explicit sourced bedrock facts (physics, compute primitives, primary evidence) before any reconstruction; produces `.grok/first-principles/first-principles.md` as co-equal highest-authority artifact with first-questions.md.
 
-Everything else (orchestration, verification, personas) exists to serve these two pillars.
+Everything else (orchestration, verification, personas) exists to serve these three pillars.
 
 ---
 
 ## Core Principles (Non-Negotiable)
 
 1. **Truth-Seeking is Primary**
+   - Serious work follows the mandatory 1→2→3 sequence: first-questions (prune scope), first-principles (reconstruct from explicit bedrock), then research + orchestration.
    - At the start of every meaningful session, the harness must proactively research current best practices using X and Web search.
    - We treat "what the model already knows" as a starting hypothesis, not as truth.
    - Recent signals from credible practitioners on X and authoritative sources on the web have higher priority than training data when they conflict.

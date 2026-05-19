@@ -29,6 +29,8 @@ We are building this in the open as a public project.
 
 - Strong curated personas (`universe-verifier`, `universe-researcher`, `universe-tactician`, etc.)
 - Session Start automatic best-practice research hook (X + Web)
+- **First Questions** companion skill (`/first-questions`) — ruthless "Question every requirement" ritual that forces a one-sentence goal and deletes scope before any work begins
+- **First Principles** companion skill (`/first-principles`) — forces explicit sourced bedrock facts and reconstruction from reality (not analogy) before solution work; co-equal highest-authority artifact with first-questions.md
 - Clear Constitution that actually influences behavior
 - Deep integration philosophy with existing high-quality skills (`/check`, `/best-of-n`, etc.)
 
@@ -45,24 +47,37 @@ cp ~/.grok/plugins/universe-grok/personas/*.toml ~/.grok/personas/
 ```
 
 After installation, activate with natural language:
-- "universe mode"
-- "full power"
+- "universe mode" / "full power"
+- "first questions" + "first principles" (the required non-negotiable pair as the very first steps on any serious work)
+- "first principles" (the required reconstruction step after first-questions, before orchestration)
 - "push Grok to the limit"
-- "orchestrate this properly"
 
-Or explicitly with `/universe`.
+Recommended order for maximum-leverage sessions:
+1. `/first-questions` — Kill ambiguity and delete everything that fails the test.
+2. `/first-principles` (on surviving scope) — Reconstruct the minimal solution from explicit bedrock truths before any design or implementation.
+3. research hook if needed
+4. `/universe` — Orchestrate with the two sacred artifacts (first-questions.md + first-principles.md) as co-equal contracts.
+
+Or explicitly with `/universe` and `/first-questions`.
 
 ## How It Works
 
-1. **Session Start** — Automatically triggers research into current best practices for your tech stack via X and web.
-2. **Orchestration** — Uses a strong set of specialized personas and forces proper multi-agent workflows.
-3. **Verification** — Makes independent verification (via `universe-verifier`) the default for any meaningful change.
+**The highest-leverage flow** (use this):
+
+1. **First Questions** (`/first-questions`) — Before anything else, force the One-Sentence Goal and ruthlessly interrogate every requirement using Elon’s "Question every requirement" protocol. Delete what fails. Produce the sacred `.grok/first-questions/first-questions.md` artifact.
+2. **Session Start Research** — Universe Grok’s hook triggers fresh X + web research into current best practices.
+3. **Orchestration** — Uses strong personas and optimal subagent topologies.
+4. **Verification** — Independent `universe-verifier` on every meaningful change.
+
+First Questions is the foundation. Universe Grok orchestration is only as good as the clarity of the goal it receives.
 
 ## Project Structure
 
 ```
 universe-grok/
-├── skills/universe-grok/SKILL.md     # Main orchestration logic
+├── skills/
+│   ├── universe-grok/SKILL.md        # Main orchestration logic
+│   └── first-questions/SKILL.md      # Ruthless requirement interrogation (run this first)
 ├── personas/                         # Universe-optimized personas
 ├── hooks/                            # SessionStart truth-seeking hook
 ├── CONSTITUTION.md                   # The soul of the project
