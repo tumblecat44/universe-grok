@@ -31,7 +31,7 @@ Work that cannot be traced to this layer has violated the fundamental protocol o
 
 ## One-Sentence Goal
 
-> Build and dogfood a Grok Build plugin (universe-grok) whose core mechanism forces every agent session to discover the .universe-grok/ Current Truth layer first, collect all active truth/decision artifacts, and derive all reasoning, planning, and implementation exclusively from them — so that complex, long-running work no longer produces repeated regressions, wrong architecture decisions, and expensive mistakes caused by scattered or stale context (as experienced in CAIRO and similar projects).
+> Build and dogfood a Grok Build plugin (universe-grok) whose core mechanism forces every agent session to discover the .universe-grok/ Current Truth layer first, collect all active truth/decision artifacts, and derive all reasoning, planning, and implementation exclusively from them — so that complex, long-running work no longer produces repeated regressions, wrong architecture decisions, and expensive mistakes caused by scattered or stale context — the exact problem this harness was built to solve.
 
 ## Bedrock Facts & Active Decisions
 

@@ -3,7 +3,7 @@
 **Authority**: This document is part of the Current Truth layer. All files and directories under `.universe-grok/decisions/` **must** follow these rules. (The `.universe-grok/truth/` subdir was removed during 2026-05-19 deprecation cleanup of the overfitted research law; no new files are placed there.)
 
 **Purpose**:  
-Enable AI agents to understand the purpose and content of every file using only `ls` output (or the injected directory listing at session start), without opening the files. This directly prevents the failure mode observed in CAIRO where critical decisions were buried in deep, non-self-describing paths and could not be discovered by agents.
+Enable AI agents to understand the purpose and content of every file using only `ls` output (or the injected directory listing at session start), without opening the files. This directly prevents the failure mode where critical decisions and requirements get buried in deep, non-self-describing paths and become impossible for agents or future contributors to discover.
 
 ---
 

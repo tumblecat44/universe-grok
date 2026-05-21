@@ -3,7 +3,7 @@
 **Type**: Installable Rule (placed in target `.grok/rules/` by universe-grok-install)
 
 **Purpose**: 
-When an agent needs to create or rename files inside `.universe-grok/decisions/` (or legacy truth/), this rule must be followed so that `ls` alone makes the purpose and content of every decision/truth file immediately obvious. This prevents the CAIRO-style failure where important records were buried under vague or non-self-describing filenames.
+When an agent needs to create or rename files inside `.universe-grok/decisions/` (or legacy truth/), this rule must be followed so that `ls` alone makes the purpose and content of every decision/truth file immediately obvious. This prevents the common failure where important records get buried under vague or non-self-describing filenames and become hard to find later.
 
 This rule is **not** part of the always-injected Current Truth layer. It is loaded on demand when the agent is about to modify the truth layer files.
 

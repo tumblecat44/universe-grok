@@ -8,9 +8,21 @@ Thumbs.db
 *.swp
 *.swo
 
-# Research artifacts (generated at runtime)
+# Personal user context and session artifacts
+# These contain private thinking, requirements, and history from the user's conversations.
+# They must NEVER be committed to the public repository (especially important because this is open source).
+.grok/first-questions/
+.grok/first-principles/
+.grok/research/
+.grok/universe-grok/
+
+# The universe-grok-install skill intentionally creates .grok/rules/ with public harness rules.
+# These are safe and useful to keep.
+!.grok/rules/
+!.grok/rules/**
+
+# Top-level research/ (legacy)
 research/
-.grok/universe-grok/research/
 
 # Temporary
 *.log
