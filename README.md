@@ -21,7 +21,7 @@ grok plugin install tumblecat44/universe-grok --trust
 Then in Grok Build:
 
 ```text
-/universe-search what is the current stable Node.js LTS version
+/universe-search SuperGrok Usage shows API — can I put that API key into Vercel Eve and run a Grok 4.5 agent billed to SuperGrok OAuth Usage?
 ```
 
 You should see **multiple** web searches in one turn, then an answer grounded in those results.
@@ -75,7 +75,7 @@ A [skill](https://agentskills.io/) is a `SKILL.md` folder of instructions. A **p
 
 | Example | What you get |
 |---------|----------------|
-| `/universe-search Next.js로 Stripe 구독 SaaS 만들고 싶어. 인증·결제·DB 후보와 함정 정리` | Stack options, official docs, comparison table, pitfalls before code |
+| `/universe-search SuperGrok Usage shows API — can I put that API key into Vercel Eve and run a Grok 4.5 agent billed to SuperGrok OAuth Usage?` | Separates Usage “API” vs console keys vs OAuth; Eve + Grok 4.5 paths; what works and what doesn’t |
 | `/universe-search Vercel AI SDK vs LangChain.js for a Next.js chat feature 2026` | Lib choice + docs + tradeoffs from current sources |
 | `/universe-search latest security advisories for package X` | Current CVE / advisory signal, with uncertainty called out |
 
