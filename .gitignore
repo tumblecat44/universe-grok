@@ -1,0 +1,8 @@
+.DS_Store
+.serena/
+*.local.yml
+.idea/
+.vscode/
+*.swp
+.claude/
+.cursor/
