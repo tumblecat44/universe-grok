@@ -1,0 +1,19 @@
+{
+  "name": "universe-grok",
+  "version": "0.1.0",
+  "description": "Web-Grok-style parallel research for Grok Build. Installs /universe-search — multi-query web + X research on demand.",
+  "author": {
+    "name": "tumblecat44",
+    "url": "https://github.com/tumblecat44"
+  },
+  "homepage": "https://github.com/tumblecat44/universe-grok",
+  "repository": "https://github.com/tumblecat44/universe-grok",
+  "license": "MIT",
+  "keywords": [
+    "research",
+    "web-search",
+    "x-search",
+    "universe-search",
+    "grok-build"
+  ]
+}
