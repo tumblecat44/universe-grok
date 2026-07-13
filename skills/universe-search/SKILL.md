@@ -60,16 +60,16 @@ Trigger: user ran `/universe-search` (with or without a topic after the command)
 Decompose into a **query pack** — do not dump a long plan unless the user
 asked for process. Cover:
 
-| Slot | Purpose | Example |
-|------|---------|---------|
-| Canonical | Official name / product page | `LG Gram 16Z90TP specs` |
-| Locale | User language | `LG 그램 16Z90TP 스펙 성능` |
-| Benchmarks | Numbers | `Core Ultra 7 255H Geekbench` |
-| Reviews | Real-world | `16Z90TP review battery` |
-| Comparison | Rival / peer | `MacBook Air 15 M4 vs LG Gram Pro 16` |
-| Live | X / social | recent posts about the product or claim |
+| Slot | Purpose | Example (build-intent) |
+|------|---------|------------------------|
+| Intent / domain | What they're building | `Next.js Stripe subscription SaaS architecture 2026` |
+| Official docs | Primary source | `Stripe Billing subscriptions Next.js App Router docs` |
+| Alternatives | Existing libs / services | `Clerk vs Auth.js vs Supabase Auth Next.js 2026` |
+| Pitfalls | What breaks in production | `Stripe webhook Next.js common mistakes` |
+| Locale | User language when relevant | `Next.js Stripe 구독 결제 구현 가이드` |
+| Live | X / social sentiment now | recent posts about the stack or lib |
 
-Skip slots that do not apply. Add slots that do (CVE, changelog, pricing, law…).
+Skip slots that do not apply. Add slots that do (CVE, changelog, pricing, license, GitHub activity…).
 
 ### 2. Wave 1 — fire in parallel
 
@@ -85,9 +85,9 @@ Do **not** wait for a perfect plan. Imperfect parallel beat perfect sequential.
 
 After Wave 1:
 
-- **Open** 1–4 high-value URLs (official specs, strong reviews, primary docs)
-- Run **follow-up searches** only for missing pieces (wrong model year, missing
-  GPU name, no multi-core numbers, no price band, etc.)
+- **Open** 1–4 high-value URLs (official docs, changelogs, strong comparisons)
+- Run **follow-up searches** only for missing pieces (wrong major version,
+  missing auth/payment option, no production pitfall signal, etc.)
 - If two sources conflict, search for a **third** or open the primary source
 
 Stop when extra searches would only polish wording.
@@ -131,30 +131,54 @@ you failed this skill. Go back and search.
 - One web search, then a long essay
 - Searching only English for a Korean product question (or the reverse)
 - Treating SEO blogs as equal to official specs
-- Inventing Geekbench / battery / price numbers
+- Inventing versions, API shapes, prices, or “current best stack” from memory
 - Sequential "search → think → search → think" when the next three queries
   were already obvious
 - Turning every run into a repo markdown report (not requested)
+- Jumping into implementation advice before a research wave on a “만들고 싶어” ask
 
 ---
 
 ## Minimal good example (shape, not content)
 
-User: `/universe-search LG Gram 16Z90TP 성능 알려주고 맥북 동사양 비교`
+**Build-intent pattern** (most common for coding agents): user names *what they want
+to build*; you map the whole surface — stack options, official docs, alternatives,
+pitfalls, live sentiment — **before** writing code.
+
+User:
+
+```text
+/universe-search Next.js로 Stripe 구독 SaaS 만들고 싶어.
+인증·결제·DB 후보랑 2026 기준 피해야 할 함정 정리해줘
+```
 
 You (one turn): parallel tools ≈
 
-1. web: `LG Gram 16Z90TP specs`
-2. web: `LG 그램 16Z90TP 스펙 성능`
-3. web: `LG Gram 16Z90TP processor CPU benchmark`
-4. web: `MacBook Air 15 M4 vs LG Gram Pro 16`
-5. web: `Intel Core Ultra 7 255H Geekbench vs Apple M4`
-6. optional X: recent posts about the model
+1. web: `Next.js SaaS boilerplate stack 2026 auth payments database`
+2. web: `Stripe Billing subscriptions Next.js App Router official`
+3. web: `Clerk vs Auth.js vs Supabase Auth Next.js comparison 2026`
+4. web: `Supabase vs Neon vs PlanetScale Next.js SaaS`
+5. web: `Stripe webhook Next.js App Router common pitfalls`
+6. web: `Next.js Stripe 구독 결제 인증 스택` (locale)
+7. optional X: `Next.js Stripe SaaS` / `Clerk vs Supabase Auth` recent posts
 
-Then open best sources → short second wave if needed → specs + comparison
-table + who should buy which.
+Then open best **primary** pages (Stripe docs, framework docs, strong comparisons)
+→ short second wave only for gaps → answer with:
 
-That shape is the bar.
+- recommended default stack + **when to pick alternatives**
+- comparison table (auth / payments / DB)
+- pitfalls to avoid before coding
+- **actionable next step** (e.g. what to scaffold first) — still no full app dump
+
+That shape is the bar for “만들고 싶어” research.
+
+**Other strong shapes** (same parallelism, different intent):
+
+| User intent | Query pack angles |
+|-------------|-------------------|
+| Lib / API choice | official docs · A vs B · GitHub issues · migration notes · X complaints |
+| “Already exist?” | OSS alternatives · npm/pypi · “build vs buy” · abandoned forks |
+| Version churn | changelog · breaking changes · current stable · upgrade guides |
 
 ---
 

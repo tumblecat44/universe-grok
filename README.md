@@ -75,8 +75,8 @@ A [skill](https://agentskills.io/) is a `SKILL.md` folder of instructions. A **p
 
 | Example | What you get |
 |---------|----------------|
-| `/universe-search LG Gram 16Z90TP specs vs closest MacBook` | Specs, benchmarks, comparison table, who should buy which |
-| `/universe-search breaking changes in React 19 for Next.js apps` | Primary docs + migration notes from current sources |
+| `/universe-search Next.js로 Stripe 구독 SaaS 만들고 싶어. 인증·결제·DB 후보와 함정 정리` | Stack options, official docs, comparison table, pitfalls before code |
+| `/universe-search Vercel AI SDK vs LangChain.js for a Next.js chat feature 2026` | Lib choice + docs + tradeoffs from current sources |
 | `/universe-search latest security advisories for package X` | Current CVE / advisory signal, with uncertainty called out |
 
 Model auto-invoke is off — research mode only runs when you type `/universe-search`.
